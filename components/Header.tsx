@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useCartStore } from "@/lib/store";
 import { ShoppingCart, Store } from "lucide-react";
 import { useEffect, useState } from "react";
+import SearchBar from "./SearchBar";
 
 export default function Header() {
   const [mounted, setMounted] = useState(false);
@@ -16,17 +17,25 @@ export default function Header() {
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
       <nav className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-gray-800 hover:text-blue-600">
+        <div className="flex items-center justify-between gap-4">
+          <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-gray-800 hover:text-blue-600 flex-shrink-0">
             <Store className="w-8 h-8" />
-            <span>WooCommerce Demo</span>
+            <span className="hidden sm:inline">WooCommerce Demo</span>
           </Link>
 
+          {/* Search Bar - Desktop */}
+          <div className="hidden md:flex flex-grow max-w-xl">
+            <SearchBar />
+          </div>
+
           <div className="flex items-center gap-6">
-            <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">
+            <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium hidden lg:block">
               Products
             </Link>
-            <Link href="/categories" className="text-gray-700 hover:text-blue-600 font-medium">
+            <Link href="/blog" className="text-gray-700 hover:text-blue-600 font-medium hidden lg:block">
+              Blog
+            </Link>
+            <Link href="/categories" className="text-gray-700 hover:text-blue-600 font-medium hidden lg:block">
               Categories
             </Link>
             <Link href="/cart" className="relative">
@@ -38,6 +47,11 @@ export default function Header() {
               )}
             </Link>
           </div>
+        </div>
+
+        {/* Search Bar - Mobile */}
+        <div className="md:hidden mt-4">
+          <SearchBar />
         </div>
       </nav>
     </header>
