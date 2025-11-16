@@ -165,8 +165,8 @@ export function getAuthorName(post: Post): string {
   return post._embedded?.author?.[0]?.name || "Unknown Author";
 }
 
-// Helper to extract categories
-export function getPostCategories(post: Post): Array<{ id: number; name: string; slug: string }> {
+// Helper to extract categories from a post
+export function extractPostCategories(post: Post): Array<{ id: number; name: string; slug: string }> {
   return post._embedded?.["wp:term"]?.[0] || [];
 }
 

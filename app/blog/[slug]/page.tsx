@@ -1,4 +1,4 @@
-import { getPostBySlug, getFeaturedImageUrl, getAuthorName, formatPostDate, getPostCategories as extractCategories } from "@/lib/wordpress";
+import { getPostBySlug, getFeaturedImageUrl, getAuthorName, formatPostDate, extractPostCategories } from "@/lib/wordpress";
 import Image from "next/image";
 import Link from "next/link";
 import { Calendar, User, Tag, ArrowLeft } from "lucide-react";
@@ -18,7 +18,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const featuredImage = getFeaturedImageUrl(post);
   const authorName = getAuthorName(post);
-  const categories = extractCategories(post);
+  const categories = extractPostCategories(post);
 
   return (
     <div className="min-h-screen bg-gray-50">

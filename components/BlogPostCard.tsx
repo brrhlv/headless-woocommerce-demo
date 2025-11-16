@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Calendar, User, Tag } from "lucide-react";
-import { Post, getFeaturedImageUrl, getAuthorName, formatPostDate, stripHtml, getPostCategories as extractCategories } from "@/lib/wordpress";
+import { Post, getFeaturedImageUrl, getAuthorName, formatPostDate, stripHtml, extractPostCategories } from "@/lib/wordpress";
 
 interface BlogPostCardProps {
   post: Post;
@@ -10,7 +10,7 @@ interface BlogPostCardProps {
 export default function BlogPostCard({ post }: BlogPostCardProps) {
   const featuredImage = getFeaturedImageUrl(post);
   const authorName = getAuthorName(post);
-  const categories = extractCategories(post);
+  const categories = extractPostCategories(post);
 
   return (
     <Link href={`/blog/${post.slug}`} className="group">
