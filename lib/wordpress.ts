@@ -1,5 +1,10 @@
+import { MOCK_BLOG_POSTS, MOCK_PAGES } from './mock-data';
+
 // WordPress REST API configuration
 const WP_STORE_URL = process.env.NEXT_PUBLIC_WC_STORE_URL || "";
+
+// Check if we should use mock data
+const USE_MOCK_DATA = !WP_STORE_URL || WP_STORE_URL === '' || WP_STORE_URL.includes('localhost');
 
 // WordPress Post interface
 export interface Post {
@@ -94,6 +99,10 @@ export async function getPosts(params?: {
   orderby?: string;
   order?: "asc" | "desc";
 }): Promise<Post[]> {
+  if (USE_MOCK_DATA) {
+    return MOCK_BLOG_POSTS as Post[];
+  }
+
   try {
     return await wpFetch<Post[]>("/posts", {
       _embed: true, // Embed author and media
@@ -101,12 +110,17 @@ export async function getPosts(params?: {
     });
   } catch (error) {
     console.error("Error fetching posts:", error);
-    return [];
+    return MOCK_BLOG_POSTS as Post[];
   }
 }
 
 // Get single post by slug
 export async function getPostBySlug(slug: string): Promise<Post | null> {
+  if (USE_MOCK_DATA) {
+    const post = MOCK_BLOG_POSTS.find(p => p.slug === slug);
+    return post as Post || null;
+  }
+
   try {
     const posts = await wpFetch<Post[]>("/posts", {
       slug,
@@ -115,7 +129,8 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     return posts[0] || null;
   } catch (error) {
     console.error(`Error fetching post by slug ${slug}:`, error);
-    return null;
+    const post = MOCK_BLOG_POSTS.find(p => p.slug === slug);
+    return post as Post || null;
   }
 }
 

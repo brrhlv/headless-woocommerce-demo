@@ -1,7 +1,12 @@
+import { MOCK_PRODUCTS, MOCK_CATEGORIES } from './mock-data';
+
 // WooCommerce API configuration
 const WC_STORE_URL = process.env.NEXT_PUBLIC_WC_STORE_URL || "";
 const WC_CONSUMER_KEY = process.env.WC_CONSUMER_KEY || "";
 const WC_CONSUMER_SECRET = process.env.WC_CONSUMER_SECRET || "";
+
+// Check if we should use mock data (when no WooCommerce backend is configured)
+const USE_MOCK_DATA = !WC_STORE_URL || WC_STORE_URL === '' || WC_STORE_URL.includes('localhost');
 
 // Helper function to make authenticated API requests
 async function wcFetch<T>(endpoint: string, params?: Record<string, any>): Promise<T> {
@@ -138,11 +143,35 @@ export async function getProducts(params?: {
   orderby?: string;
   order?: "asc" | "desc";
 }): Promise<Product[]> {
+  if (USE_MOCK_DATA) {
+    let products = [...MOCK_PRODUCTS] as Product[];
+
+    // Apply filters
+    if (params?.category) {
+      products = products.filter(p =>
+        p.categories.some(c => c.id === params.category)
+      );
+    }
+    if (params?.search) {
+      const search = params.search.toLowerCase();
+      products = products.filter(p =>
+        p.name.toLowerCase().includes(search) ||
+        p.description.toLowerCase().includes(search)
+      );
+    }
+
+    // Apply pagination
+    const perPage = params?.per_page || 10;
+    const page = params?.page || 1;
+    const start = (page - 1) * perPage;
+    return products.slice(start, start + perPage);
+  }
+
   try {
     return await wcFetch<Product[]>("/products", params);
   } catch (error) {
     console.error("Error fetching products:", error);
-    return [];
+    return MOCK_PRODUCTS as Product[];
   }
 }
 
@@ -156,12 +185,18 @@ export async function getProduct(id: number): Promise<Product | null> {
 }
 
 export async function getProductBySlug(slug: string): Promise<Product | null> {
+  if (USE_MOCK_DATA) {
+    const product = MOCK_PRODUCTS.find(p => p.slug === slug);
+    return product as Product || null;
+  }
+
   try {
     const products = await wcFetch<Product[]>("/products", { slug });
     return products[0] || null;
   } catch (error) {
     console.error(`Error fetching product by slug ${slug}:`, error);
-    return null;
+    const product = MOCK_PRODUCTS.find(p => p.slug === slug);
+    return product as Product || null;
   }
 }
 
@@ -170,11 +205,15 @@ export async function getCategories(params?: {
   per_page?: number;
   page?: number;
 }): Promise<Category[]> {
+  if (USE_MOCK_DATA) {
+    return MOCK_CATEGORIES as Category[];
+  }
+
   try {
     return await wcFetch<Category[]>("/products/categories", params);
   } catch (error) {
     console.error("Error fetching categories:", error);
-    return [];
+    return MOCK_CATEGORIES as Category[];
   }
 }
 
