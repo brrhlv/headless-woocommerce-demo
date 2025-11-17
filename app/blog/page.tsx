@@ -13,8 +13,8 @@ export default async function BlogPage() {
     <div className="container mx-auto px-4 py-8">
       {/* Page Header */}
       <div className="mb-12 text-center">
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">Our Blog</h1>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <h1 className="text-4xl font-bold text-white mb-4">Our Blog</h1>
+        <p className="text-lg text-gray-400 max-w-2xl mx-auto">
           Discover the latest news, product updates, and expert tips
         </p>
       </div>
@@ -27,11 +27,11 @@ export default async function BlogPage() {
           ))}
         </div>
       ) : (
-        <div className="text-center py-16 bg-gray-50 rounded-lg">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-2">
+        <div className="text-center py-16 bg-zinc-900 rounded-lg">
+          <h2 className="text-2xl font-semibold text-white mb-2">
             No blog posts yet
           </h2>
-          <p className="text-gray-600">
+          <p className="text-gray-400">
             Check back soon for the latest updates and articles!
           </p>
         </div>

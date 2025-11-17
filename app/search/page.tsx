@@ -14,13 +14,13 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
     return (
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-gray-800 mb-4">Search Products</h1>
-          <p className="text-gray-600 mb-8">
+          <h1 className="text-3xl font-bold text-white mb-4">Search Products</h1>
+          <p className="text-gray-400 mb-8">
             Enter a search term to find products
           </p>
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium"
+            className="inline-flex items-center gap-2 text-white hover:text-red-600 font-medium"
           >
             <ArrowLeft className="w-5 h-5" />
             Back to Products
@@ -38,16 +38,16 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
       <div className="mb-8">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-800 mb-4"
+          className="inline-flex items-center gap-2 text-gray-400 hover:text-white mb-4"
         >
           <ArrowLeft className="w-5 h-5" />
           Back to Products
         </Link>
 
-        <h1 className="text-4xl font-bold text-gray-800 mb-2">
+        <h1 className="text-4xl font-bold text-white mb-2">
           Search Results
         </h1>
-        <p className="text-gray-600">
+        <p className="text-gray-400">
           {products.length > 0 ? (
             <>
               Found <span className="font-semibold">{products.length}</span> result
@@ -68,23 +68,23 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
           ))}
         </div>
       ) : (
-        <div className="bg-gray-50 rounded-lg p-12 text-center">
-          <h2 className="text-xl font-semibold text-gray-800 mb-2">
+        <div className="bg-zinc-900 rounded-lg p-12 text-center border border-zinc-800">
+          <h2 className="text-xl font-semibold text-white mb-2">
             No products found
           </h2>
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-400 mb-6">
             Try searching with different keywords or browse our categories
           </p>
           <div className="flex gap-4 justify-center">
             <Link
               href="/"
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              className="bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
             >
               Browse All Products
             </Link>
             <Link
               href="/categories"
-              className="bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
+              className="bg-zinc-950 text-white px-6 py-3 rounded-lg font-semibold hover:bg-zinc-800 transition-colors border border-zinc-800"
             >
               View Categories
             </Link>
