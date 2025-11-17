@@ -29,12 +29,6 @@ export default function Header() {
           </div>
 
           <div className="flex items-center gap-8">
-            <Link href="/" className="text-gray-300 hover:text-white font-light text-sm tracking-wide uppercase transition-colors hidden lg:block">
-              Products
-            </Link>
-            <Link href="/categories" className="text-gray-300 hover:text-white font-light text-sm tracking-wide uppercase transition-colors hidden lg:block">
-              Categories
-            </Link>
             <Link href="/blog" className="text-gray-300 hover:text-white font-light text-sm tracking-wide uppercase transition-colors hidden lg:block">
               Blog
             </Link>
