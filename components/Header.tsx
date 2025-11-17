@@ -15,12 +15,12 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
-      <nav className="container mx-auto px-4 py-4">
+    <header className="bg-black border-b border-gray-800 sticky top-0 z-50">
+      <nav className="container mx-auto px-4 py-5">
         <div className="flex items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-gray-800 hover:text-blue-600 flex-shrink-0">
-            <Store className="w-8 h-8" />
-            <span className="hidden sm:inline">WooCommerce Demo</span>
+          <Link href="/" className="flex items-center gap-3 text-xl font-light text-white hover:text-red-600 transition-colors flex-shrink-0 tracking-wider uppercase">
+            <Store className="w-6 h-6" strokeWidth={1.5} />
+            <span className="hidden sm:inline">Store</span>
           </Link>
 
           {/* Search Bar - Desktop */}
@@ -28,20 +28,20 @@ export default function Header() {
             <SearchBar />
           </div>
 
-          <div className="flex items-center gap-6">
-            <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium hidden lg:block">
+          <div className="flex items-center gap-8">
+            <Link href="/" className="text-gray-300 hover:text-white font-light text-sm tracking-wide uppercase transition-colors hidden lg:block">
               Products
             </Link>
-            <Link href="/blog" className="text-gray-700 hover:text-blue-600 font-medium hidden lg:block">
+            <Link href="/blog" className="text-gray-300 hover:text-white font-light text-sm tracking-wide uppercase transition-colors hidden lg:block">
               Blog
             </Link>
-            <Link href="/categories" className="text-gray-700 hover:text-blue-600 font-medium hidden lg:block">
+            <Link href="/categories" className="text-gray-300 hover:text-white font-light text-sm tracking-wide uppercase transition-colors hidden lg:block">
               Categories
             </Link>
-            <Link href="/cart" className="relative">
-              <ShoppingCart className="w-6 h-6 text-gray-700 hover:text-blue-600" />
+            <Link href="/cart" className="relative group">
+              <ShoppingCart className="w-5 h-5 text-gray-300 group-hover:text-white transition-colors" strokeWidth={1.5} />
               {mounted && itemCount > 0 && (
-                <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">
+                <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">
                   {itemCount}
                 </span>
               )}
