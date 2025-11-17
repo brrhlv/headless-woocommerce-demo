@@ -15,7 +15,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="bg-black border-b border-gray-800 sticky top-0 z-50">
+    <header className="bg-black border-b border-gray-800 sticky top-0 z-50 backdrop-blur-md bg-opacity-90">
       <nav className="container mx-auto px-4 py-5">
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-3 text-xl font-light text-white hover:text-red-600 transition-colors flex-shrink-0 tracking-wider uppercase">

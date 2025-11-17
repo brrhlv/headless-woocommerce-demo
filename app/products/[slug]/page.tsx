@@ -166,7 +166,7 @@ export default function ProductPage() {
             <div className="flex items-center gap-4">
               <button
                 onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                className="w-12 h-12 border border-zinc-700 hover:border-red-600 transition-colors flex items-center justify-center font-light"
+                className="w-12 h-12 border border-gray-600 hover:border-blue-500 transition-colors flex items-center justify-center rounded-lg"
               >
                 -
               </button>
@@ -175,11 +175,11 @@ export default function ProductPage() {
                 min="1"
                 value={quantity}
                 onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value) || 1))}
-                className="w-24 h-12 text-center border border-zinc-700 font-light focus:border-red-600 focus:ring-0"
+                className="w-24 h-12 text-center border border-gray-600 bg-transparent rounded-lg focus:border-blue-500 focus:ring-0 focus:outline-none"
               />
               <button
                 onClick={() => setQuantity(quantity + 1)}
-                className="w-12 h-12 border border-zinc-700 hover:border-red-600 transition-colors flex items-center justify-center font-light"
+                className="w-12 h-12 border border-gray-600 hover:border-blue-500 transition-colors flex items-center justify-center rounded-lg"
               >
                 +
               </button>
@@ -190,7 +190,7 @@ export default function ProductPage() {
           <button
             onClick={handleAddToCart}
             disabled={product.stock_status !== "instock"}
-            className="w-full bg-red-600 text-white py-4 font-light text-sm tracking-wider uppercase hover:bg-red-700 disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center gap-3 transition-colors mb-6"
+            className="apple-button-primary w-full disabled:bg-gray-600 disabled:cursor-not-allowed flex items-center justify-center gap-3 mb-6"
           >
             <ShoppingCart className="w-4 h-4" strokeWidth={1.5} />
             {product.stock_status === "instock" ? "Add to Cart" : "Out of Stock"}

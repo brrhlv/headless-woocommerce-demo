@@ -11,8 +11,8 @@ export default function ProductCard({ product }: ProductCardProps) {
 
   return (
     <Link href={`/products/${product.slug}`} className="group h-full">
-      <div className="bg-zinc-900 border border-zinc-800 overflow-hidden hover:border-red-600 transition-all duration-300 h-full flex flex-col">
-        <div className="relative h-80 w-full overflow-hidden bg-zinc-950 flex-shrink-0">
+      <div className="apple-card-dark overflow-hidden h-full flex flex-col">
+        <div className="relative h-80 w-full overflow-hidden bg-black flex-shrink-0">
           <Image
             src={imageUrl}
             alt={product.name}
@@ -21,7 +21,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           {product.on_sale && (
-            <div className="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 text-xs font-light tracking-wider uppercase">
+            <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 text-xs font-medium tracking-wider uppercase rounded">
               Sale
             </div>
           )}

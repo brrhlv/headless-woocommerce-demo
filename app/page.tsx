@@ -8,8 +8,8 @@ export default async function HomePage() {
     <div className="min-h-screen">
       <div className="container mx-auto px-4 py-16">
         <div className="mb-16 text-center">
-          <h1 className="text-3xl font-light text-white mb-4 tracking-wider uppercase">Featured Products</h1>
-          <p className="text-gray-400 font-light text-sm max-w-2xl mx-auto">
+          <h1 className="text-5xl md:text-6xl font-semibold mb-4 tracking-tight">Featured Products</h1>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Discover our curated collection of premium products
           </p>
         </div>

@@ -21,7 +21,7 @@ export default function CartPage() {
           </p>
           <Link
             href="/"
-            className="inline-block bg-red-600 text-white px-10 py-3 font-light text-sm tracking-wider uppercase hover:bg-red-700 transition-colors"
+            className="apple-button-primary inline-block"
           >
             Continue Shopping
           </Link>
@@ -32,12 +32,12 @@ export default function CartPage() {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <h1 className="text-2xl font-light text-white mb-12 tracking-wider uppercase">Shopping Cart</h1>
+      <h1 className="text-4xl font-semibold mb-12 tracking-tight">Shopping Cart</h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
         {/* Cart Items */}
         <div className="lg:col-span-2">
-          <div className="bg-zinc-900 border border-zinc-800 p-8">
+          <div className="apple-card-dark p-8">
             {items.map((item) => (
               <div
                 key={item.id}
@@ -107,34 +107,34 @@ export default function CartPage() {
 
         {/* Order Summary */}
         <div className="lg:col-span-1">
-          <div className="bg-zinc-900 border border-zinc-800 p-8 sticky top-24">
-            <h2 className="text-sm font-light tracking-wider uppercase mb-8 text-white">Order Summary</h2>
+          <div className="apple-card-dark p-8 sticky top-24">
+            <h2 className="text-lg font-semibold mb-8">Order Summary</h2>
 
             <div className="space-y-4 mb-8">
-              <div className="flex justify-between text-gray-400 font-light text-sm">
+              <div className="flex justify-between text-gray-400 text-sm">
                 <span>Subtotal</span>
                 <span>${total.toFixed(2)}</span>
               </div>
-              <div className="flex justify-between text-gray-400 font-light text-sm">
+              <div className="flex justify-between text-gray-400 text-sm">
                 <span>Shipping</span>
                 <span className="text-xs">Calculated at checkout</span>
               </div>
-              <div className="border-t border-zinc-800 pt-4 flex justify-between font-normal text-white">
-                <span className="tracking-wide">Total</span>
+              <div className="border-t border-gray-700 pt-4 flex justify-between font-semibold text-white text-lg">
+                <span>Total</span>
                 <span>${total.toFixed(2)}</span>
               </div>
             </div>
 
             <Link
               href="/checkout"
-              className="block w-full bg-red-600 text-white text-center py-3 font-light text-sm tracking-wider uppercase hover:bg-red-700 transition-colors mb-4"
+              className="apple-button-primary block w-full text-center mb-4"
             >
               Proceed to Checkout
             </Link>
 
             <Link
               href="/"
-              className="block w-full text-center text-gray-400 hover:text-white font-light text-sm tracking-wide transition-colors"
+              className="block w-full text-center text-blue-400 hover:text-blue-300 text-sm transition-colors"
             >
               Continue Shopping
             </Link>
