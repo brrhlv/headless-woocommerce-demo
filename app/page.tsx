@@ -5,7 +5,7 @@ export default async function HomePage() {
   const products = await getProducts({ per_page: 12 }) || [];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       <div className="container mx-auto px-4 py-16">
         <div className="mb-16 text-center">
           <h1 className="text-3xl font-light text-black mb-4 tracking-wider uppercase">Featured Products</h1>
