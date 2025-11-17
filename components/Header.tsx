@@ -32,11 +32,20 @@ export default function Header() {
             <Link href="/" className="text-gray-300 hover:text-white font-light text-sm tracking-wide uppercase transition-colors hidden lg:block">
               Products
             </Link>
+            <Link href="/categories" className="text-gray-300 hover:text-white font-light text-sm tracking-wide uppercase transition-colors hidden lg:block">
+              Categories
+            </Link>
             <Link href="/blog" className="text-gray-300 hover:text-white font-light text-sm tracking-wide uppercase transition-colors hidden lg:block">
               Blog
             </Link>
-            <Link href="/categories" className="text-gray-300 hover:text-white font-light text-sm tracking-wide uppercase transition-colors hidden lg:block">
-              Categories
+            <Link href="/about" className="text-gray-300 hover:text-white font-light text-sm tracking-wide uppercase transition-colors hidden lg:block">
+              About
+            </Link>
+            <Link href="/faq" className="text-gray-300 hover:text-white font-light text-sm tracking-wide uppercase transition-colors hidden lg:block">
+              FAQ
+            </Link>
+            <Link href="/contact" className="text-gray-300 hover:text-white font-light text-sm tracking-wide uppercase transition-colors hidden lg:block">
+              Contact
             </Link>
             <Link href="/cart" className="relative group">
               <ShoppingCart className="w-5 h-5 text-gray-300 group-hover:text-white transition-colors" strokeWidth={1.5} />

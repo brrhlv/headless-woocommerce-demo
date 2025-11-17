@@ -15,7 +15,7 @@ export const MOCK_PRODUCTS = [
     images: [
       {
         id: 1,
-        src: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80',
+        src: 'https://picsum.photos/seed/headphones/800/800',
         alt: 'Premium Wireless Headphones'
       }
     ],
@@ -34,7 +34,7 @@ export const MOCK_PRODUCTS = [
     images: [
       {
         id: 2,
-        src: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80',
+        src: 'https://picsum.photos/seed/smartwatch/800/800',
         alt: 'Smart Watch Pro'
       }
     ],
@@ -53,7 +53,7 @@ export const MOCK_PRODUCTS = [
     images: [
       {
         id: 3,
-        src: 'https://images.unsplash.com/photo-1627123424574-724758594e93?w=800&q=80',
+        src: 'https://picsum.photos/seed/wallet/800/800',
         alt: 'Minimalist Leather Wallet'
       }
     ],
@@ -74,7 +74,7 @@ export const MOCK_PRODUCTS = [
     images: [
       {
         id: 4,
-        src: 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=800&q=80',
+        src: 'https://picsum.photos/seed/speaker/800/800',
         alt: 'Portable Bluetooth Speaker'
       }
     ],
@@ -95,7 +95,7 @@ export const MOCK_PRODUCTS = [
     images: [
       {
         id: 5,
-        src: 'https://images.unsplash.com/photo-1580480055273-228ff5388ef8?w=800&q=80',
+        src: 'https://picsum.photos/seed/chair/800/800',
         alt: 'Ergonomic Office Chair'
       }
     ],
@@ -114,7 +114,7 @@ export const MOCK_PRODUCTS = [
     images: [
       {
         id: 6,
-        src: 'https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=800&q=80',
+        src: 'https://picsum.photos/seed/bottle/800/800',
         alt: 'Stainless Steel Water Bottle'
       }
     ],
@@ -133,7 +133,7 @@ export const MOCK_PRODUCTS = [
     images: [
       {
         id: 7,
-        src: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800&q=80',
+        src: 'https://picsum.photos/seed/keyboard/800/800',
         alt: 'Mechanical Keyboard RGB'
       }
     ],
@@ -154,7 +154,7 @@ export const MOCK_PRODUCTS = [
     images: [
       {
         id: 8,
-        src: 'https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=800&q=80',
+        src: 'https://picsum.photos/seed/yogamat/800/800',
         alt: 'Yoga Mat Premium'
       }
     ],
