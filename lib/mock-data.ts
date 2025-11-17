@@ -261,37 +261,377 @@ export const MOCK_PAGES = [
     title: { rendered: 'About Us' },
     slug: 'about',
     content: { rendered: `
-      <h1>About Our Store</h1>
-      <p>We're passionate about bringing you high-quality products that enhance your daily life.</p>
-      <h2>Our Mission</h2>
-      <p>To provide carefully curated products that combine functionality, style, and value.</p>
-      <h2>Why Shop With Us?</h2>
-      <ul>
-        <li>🚀 Fast, free shipping on orders over $50</li>
-        <li>✅ 30-day money-back guarantee</li>
-        <li>💳 Secure checkout</li>
-        <li>📦 Easy returns</li>
-        <li>⭐ Premium customer service</li>
-      </ul>
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold mb-6">About Our Store</h1>
+
+        <div class="mb-8">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&q=80" alt="Our Store" class="w-full h-64 object-cover rounded-lg mb-6" />
+        </div>
+
+        <p class="text-xl text-gray-600 mb-8">We're passionate about bringing you high-quality products that enhance your daily life. Since 2020, we've been dedicated to curating the finest selection of electronics, accessories, and lifestyle products.</p>
+
+        <h2 class="text-3xl font-bold mb-4">Our Story</h2>
+        <p class="mb-6">Founded by a team of tech enthusiasts and design lovers, our store was born from a simple idea: everyone deserves access to premium products that combine functionality, style, and value. What started as a small online shop has grown into a trusted destination for thousands of customers worldwide.</p>
+
+        <h2 class="text-3xl font-bold mb-4">Our Mission</h2>
+        <p class="mb-6">To provide carefully curated products that enhance your daily life, backed by exceptional customer service and a commitment to quality. We believe that great products should be accessible to everyone, and we work tirelessly to bring you the best at competitive prices.</p>
+
+        <h2 class="text-3xl font-bold mb-4">Why Shop With Us?</h2>
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-blue-50 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-2">🚀 Fast & Free Shipping</h3>
+            <p>Free shipping on orders over $50. Most orders arrive within 3-5 business days.</p>
+          </div>
+          <div class="bg-green-50 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-2">✅ 30-Day Guarantee</h3>
+            <p>Not satisfied? Return any item within 30 days for a full refund, no questions asked.</p>
+          </div>
+          <div class="bg-purple-50 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-2">💳 Secure Checkout</h3>
+            <p>Your payment information is encrypted and secure with industry-standard SSL technology.</p>
+          </div>
+          <div class="bg-yellow-50 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-2">⭐ Premium Support</h3>
+            <p>Our customer service team is here to help you 7 days a week via phone, email, or live chat.</p>
+          </div>
+        </div>
+
+        <h2 class="text-3xl font-bold mb-4">Our Values</h2>
+        <ul class="space-y-4 mb-8">
+          <li class="flex items-start">
+            <span class="text-2xl mr-3">🌟</span>
+            <div>
+              <strong class="block">Quality First</strong>
+              <span class="text-gray-600">We carefully vet every product to ensure it meets our high standards for quality and durability.</span>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-2xl mr-3">🤝</span>
+            <div>
+              <strong class="block">Customer Focused</strong>
+              <span class="text-gray-600">Your satisfaction is our priority. We listen to feedback and continuously improve our service.</span>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-2xl mr-3">🌍</span>
+            <div>
+              <strong class="block">Sustainability</strong>
+              <span class="text-gray-600">We partner with eco-conscious brands and use sustainable packaging whenever possible.</span>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-2xl mr-3">💡</span>
+            <div>
+              <strong class="block">Innovation</strong>
+              <span class="text-gray-600">We stay ahead of trends to bring you the latest and greatest products on the market.</span>
+            </div>
+          </li>
+        </ul>
+
+        <h2 class="text-3xl font-bold mb-4">Our Team</h2>
+        <p class="mb-6">We're a distributed team of passionate individuals who love what we do. From product curation to customer service, every team member is committed to making your shopping experience exceptional.</p>
+
+        <div class="bg-gray-100 p-6 rounded-lg mb-8">
+          <h3 class="text-xl font-semibold mb-3">Join Our Community</h3>
+          <p class="mb-4">Follow us on social media for exclusive deals, new product announcements, and behind-the-scenes content!</p>
+          <div class="flex gap-4">
+            <a href="#" class="text-blue-600 hover:text-blue-800">Instagram</a>
+            <a href="#" class="text-blue-600 hover:text-blue-800">Twitter</a>
+            <a href="#" class="text-blue-600 hover:text-blue-800">Facebook</a>
+            <a href="#" class="text-blue-600 hover:text-blue-800">LinkedIn</a>
+          </div>
+        </div>
+      </div>
     ` }
   },
   {
     id: 202,
+    title: { rendered: 'FAQ' },
+    slug: 'faq',
+    content: { rendered: `
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold mb-6">Frequently Asked Questions</h1>
+        <p class="text-xl text-gray-600 mb-8">Find answers to common questions about ordering, shipping, returns, and more.</p>
+
+        <div class="space-y-6">
+          <div class="bg-white border border-gray-200 rounded-lg p-6">
+            <h2 class="text-2xl font-bold mb-4">Ordering & Payment</h2>
+
+            <div class="space-y-4">
+              <div>
+                <h3 class="font-semibold text-lg mb-2">How do I place an order?</h3>
+                <p class="text-gray-600">Simply browse our products, add items to your cart, and proceed to checkout. You'll need to provide shipping information and payment details to complete your order.</p>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-lg mb-2">What payment methods do you accept?</h3>
+                <p class="text-gray-600">We accept all major credit cards (Visa, Mastercard, American Express, Discover), PayPal, Apple Pay, and Google Pay.</p>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-lg mb-2">Is my payment information secure?</h3>
+                <p class="text-gray-600">Yes! We use industry-standard SSL encryption to protect your payment information. We never store your full credit card details on our servers.</p>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-lg mb-2">Can I modify or cancel my order?</h3>
+                <p class="text-gray-600">You can modify or cancel your order within 1 hour of placing it. Contact our customer service team immediately for assistance. Orders cannot be modified once they've been shipped.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-lg p-6">
+            <h2 class="text-2xl font-bold mb-4">Shipping & Delivery</h2>
+
+            <div class="space-y-4">
+              <div>
+                <h3 class="font-semibold text-lg mb-2">How much does shipping cost?</h3>
+                <p class="text-gray-600">Shipping is FREE on orders over $50. For orders under $50, standard shipping is $5.99. Express shipping options are available at checkout.</p>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-lg mb-2">How long does delivery take?</h3>
+                <p class="text-gray-600">Standard shipping typically takes 3-5 business days. Express shipping delivers within 1-2 business days. You'll receive a tracking number once your order ships.</p>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-lg mb-2">Do you ship internationally?</h3>
+                <p class="text-gray-600">Currently, we ship to the United States and Canada. International shipping to other countries will be available soon!</p>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-lg mb-2">How can I track my order?</h3>
+                <p class="text-gray-600">You'll receive a shipping confirmation email with a tracking number once your order is dispatched. You can track your package using this number on our website or the carrier's website.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-lg p-6">
+            <h2 class="text-2xl font-bold mb-4">Returns & Refunds</h2>
+
+            <div class="space-y-4">
+              <div>
+                <h3 class="font-semibold text-lg mb-2">What is your return policy?</h3>
+                <p class="text-gray-600">We offer a 30-day money-back guarantee on all products. If you're not completely satisfied, return the item in its original condition for a full refund.</p>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-lg mb-2">How do I initiate a return?</h3>
+                <p class="text-gray-600">Contact our customer service team with your order number and reason for return. We'll provide you with a return shipping label and instructions.</p>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-lg mb-2">When will I receive my refund?</h3>
+                <p class="text-gray-600">Refunds are processed within 5-7 business days after we receive your returned item. The refund will be credited to your original payment method.</p>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-lg mb-2">What if my item arrives damaged?</h3>
+                <p class="text-gray-600">We're sorry to hear that! Contact us immediately with photos of the damaged item. We'll send a replacement or issue a full refund, and you won't need to return the damaged item.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-lg p-6">
+            <h2 class="text-2xl font-bold mb-4">Products & Inventory</h2>
+
+            <div class="space-y-4">
+              <div>
+                <h3 class="font-semibold text-lg mb-2">How do I know if an item is in stock?</h3>
+                <p class="text-gray-600">Our website shows real-time inventory. If an item is available to add to cart, it's in stock. Out-of-stock items will show "Notify Me" instead.</p>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-lg mb-2">Do you restock sold-out items?</h3>
+                <p class="text-gray-600">Yes! Most items are restocked regularly. Sign up for notifications on product pages to be alerted when items are back in stock.</p>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-lg mb-2">Are your products authentic?</h3>
+                <p class="text-gray-600">Absolutely! We only source products from authorized distributors and manufacturers. All items come with manufacturer warranties where applicable.</p>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-lg mb-2">Do products come with warranties?</h3>
+                <p class="text-gray-600">Many products include manufacturer warranties. Check the product description for specific warranty information. We also offer extended warranty options at checkout.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-lg p-6">
+            <h2 class="text-2xl font-bold mb-4">Account & Privacy</h2>
+
+            <div class="space-y-4">
+              <div>
+                <h3 class="font-semibold text-lg mb-2">Do I need an account to shop?</h3>
+                <p class="text-gray-600">No, you can checkout as a guest. However, creating an account lets you track orders, save items, and checkout faster on future purchases.</p>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-lg mb-2">How is my personal information used?</h3>
+                <p class="text-gray-600">We only use your information to process orders and communicate with you. We never sell your data to third parties. See our Privacy Policy for full details.</p>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-lg mb-2">How do I unsubscribe from emails?</h3>
+                <p class="text-gray-600">Click the "Unsubscribe" link at the bottom of any marketing email. You'll still receive order confirmation and shipping notifications.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 bg-blue-50 p-8 rounded-lg text-center">
+          <h2 class="text-2xl font-bold mb-4">Still have questions?</h2>
+          <p class="text-gray-600 mb-6">Our customer service team is here to help!</p>
+          <a href="/contact" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    ` }
+  },
+  {
+    id: 203,
     title: { rendered: 'Contact Us' },
     slug: 'contact',
     content: { rendered: `
-      <h1>Contact Us</h1>
-      <p>We'd love to hear from you! Get in touch with our team.</p>
-      <h2>Customer Service</h2>
-      <ul>
-        <li>📧 Email: support@example.com</li>
-        <li>📞 Phone: 1-800-123-4567</li>
-        <li>💬 Live Chat: Available 9am-6pm EST</li>
-      </ul>
-      <h2>Business Hours</h2>
-      <p>Monday - Friday: 9:00 AM - 6:00 PM EST<br>
-      Saturday: 10:00 AM - 4:00 PM EST<br>
-      Sunday: Closed</p>
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold mb-6">Contact Us</h1>
+        <p class="text-xl text-gray-600 mb-8">We'd love to hear from you! Whether you have a question about products, orders, or just want to say hi, our team is ready to help.</p>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <div class="bg-white border border-gray-200 rounded-lg p-6">
+            <h2 class="text-2xl font-bold mb-4">Customer Service</h2>
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <span class="text-2xl mr-3">📧</span>
+                <div>
+                  <strong class="block">Email</strong>
+                  <a href="mailto:support@example.com" class="text-blue-600 hover:text-blue-800">support@example.com</a>
+                  <p class="text-sm text-gray-500">Response within 24 hours</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <span class="text-2xl mr-3">📞</span>
+                <div>
+                  <strong class="block">Phone</strong>
+                  <a href="tel:1-800-123-4567" class="text-blue-600 hover:text-blue-800">1-800-123-4567</a>
+                  <p class="text-sm text-gray-500">Mon-Fri 9am-6pm EST</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <span class="text-2xl mr-3">💬</span>
+                <div>
+                  <strong class="block">Live Chat</strong>
+                  <button class="text-blue-600 hover:text-blue-800">Start Chat</button>
+                  <p class="text-sm text-gray-500">Available 9am-6pm EST</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-lg p-6">
+            <h2 class="text-2xl font-bold mb-4">Business Hours</h2>
+            <div class="space-y-2">
+              <div class="flex justify-between">
+                <span class="font-medium">Monday - Friday:</span>
+                <span>9:00 AM - 6:00 PM EST</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="font-medium">Saturday:</span>
+                <span>10:00 AM - 4:00 PM EST</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="font-medium">Sunday:</span>
+                <span>Closed</span>
+              </div>
+            </div>
+            <div class="mt-6 p-4 bg-blue-50 rounded">
+              <p class="text-sm text-gray-600">💡 For fastest response, use live chat during business hours or email us anytime!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-8 mb-8">
+          <h2 class="text-2xl font-bold mb-6">Send Us a Message</h2>
+          <form class="space-y-4">
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium mb-2">First Name *</label>
+                <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent" required />
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2">Last Name *</label>
+                <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent" required />
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2">Email *</label>
+              <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent" required />
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2">Order Number (if applicable)</label>
+              <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2">Subject *</label>
+              <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent" required>
+                <option value="">Select a topic...</option>
+                <option value="order">Order Status</option>
+                <option value="product">Product Question</option>
+                <option value="return">Return/Refund</option>
+                <option value="shipping">Shipping</option>
+                <option value="technical">Technical Issue</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2">Message *</label>
+              <textarea rows="6" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent" required></textarea>
+            </div>
+            <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition font-semibold">
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mb-12">
+          <div class="text-center p-6 bg-gray-50 rounded-lg">
+            <div class="text-3xl mb-3">🚚</div>
+            <h3 class="font-semibold mb-2">Shipping Questions</h3>
+            <p class="text-sm text-gray-600">Track your order or ask about delivery times</p>
+          </div>
+          <div class="text-center p-6 bg-gray-50 rounded-lg">
+            <div class="text-3xl mb-3">↩️</div>
+            <h3 class="font-semibold mb-2">Returns & Refunds</h3>
+            <p class="text-sm text-gray-600">30-day money-back guarantee on all items</p>
+          </div>
+          <div class="text-center p-6 bg-gray-50 rounded-lg">
+            <div class="text-3xl mb-3">🛍️</div>
+            <h3 class="font-semibold mb-2">Product Support</h3>
+            <p class="text-sm text-gray-600">Need help choosing or using a product?</p>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg p-8 text-center">
+          <h2 class="text-2xl font-bold mb-4">Join Our Community</h2>
+          <p class="mb-6">Follow us on social media for exclusive deals, new arrivals, and customer stories!</p>
+          <div class="flex justify-center gap-6">
+            <a href="#" class="hover:opacity-80 transition">
+              <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-2xl">📷</div>
+              <p class="text-sm mt-2">Instagram</p>
+            </a>
+            <a href="#" class="hover:opacity-80 transition">
+              <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-2xl">🐦</div>
+              <p class="text-sm mt-2">Twitter</p>
+            </a>
+            <a href="#" class="hover:opacity-80 transition">
+              <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-2xl">📘</div>
+              <p class="text-sm mt-2">Facebook</p>
+            </a>
+          </div>
+        </div>
+      </div>
     ` }
   }
 ];
