@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* ============================================
+   DARK THEME (Default)
+   ============================================ */
 :root {
   --background: #0a0a0a;
   --foreground: #ffffff;
@@ -9,6 +12,73 @@
   --grey-dark: #9ca3af;
   --card-bg: #111111;
   --border-color: #262626;
+}
+
+/* ============================================
+   APPLE DESIGN SYSTEM
+   ============================================ */
+.apple-theme {
+  /* Colors - Apple System */
+  --apple-blue: #0071E3;
+  --apple-blue-hover: #0077ED;
+  --apple-grey-50: #F5F5F7;
+  --apple-grey-100: #E8E8ED;
+  --apple-grey-200: #D2D2D7;
+  --apple-grey-300: #B0B0B5;
+  --apple-grey-400: #8E8E93;
+  --apple-grey-500: #636366;
+  --apple-grey-600: #48484A;
+  --apple-grey-700: #3A3A3C;
+  --apple-grey-800: #2C2C2E;
+  --apple-grey-900: #1C1C1E;
+
+  /* Typography - SF Pro inspired */
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+  --font-text: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+
+  /* Spacing - 8-point grid */
+  --space-1: 0.5rem;   /* 8px */
+  --space-2: 1rem;     /* 16px */
+  --space-3: 1.5rem;   /* 24px */
+  --space-4: 2rem;     /* 32px */
+  --space-6: 3rem;     /* 48px */
+  --space-8: 4rem;     /* 64px */
+  --space-12: 6rem;    /* 96px */
+
+  /* Border Radius */
+  --radius-sm: 0.5rem;   /* 8px */
+  --radius-md: 1rem;     /* 16px */
+  --radius-lg: 1.5rem;   /* 24px */
+  --radius-full: 624.9375rem; /* pill shape */
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   APPLE DARK THEME VARIATION
+   ============================================ */
+.apple-theme.dark {
+  --apple-blue: #0A84FF;
+  --apple-blue-hover: #409CFF;
+  --apple-bg: #000000;
+  --apple-bg-secondary: #1C1C1E;
+  --apple-bg-tertiary: #2C2C2E;
+  --apple-text-primary: #F5F5F7;
+  --apple-text-secondary: #98989D;
+  --apple-text-tertiary: #636366;
+  --apple-border: #38383A;
+
+  background-color: var(--apple-bg);
+  color: var(--apple-text-primary);
 }
 
 @theme inline {
@@ -32,4 +102,172 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   APPLE TYPOGRAPHY SYSTEM
+   ============================================ */
+.apple-theme h1,
+.apple-theme h2,
+.apple-theme h3,
+.apple-theme h4,
+.apple-theme h5,
+.apple-theme h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+}
+
+.apple-theme p,
+.apple-theme span,
+.apple-theme a {
+  font-family: var(--font-text);
+  letter-spacing: -0.01em;
+  line-height: 1.47059;
+}
+
+/* ============================================
+   APPLE GLASS EFFECT (Liquid Glass)
+   ============================================ */
+.apple-glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.apple-glass-dark {
+  background: rgba(28, 28, 30, 0.72);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ============================================
+   APPLE BUTTON STYLES
+   ============================================ */
+.apple-button-primary {
+  background: var(--apple-blue);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-full);
+  font-size: 1.0625rem;
+  font-weight: 500;
+  transition: background var(--transition-base);
+  border: none;
+  cursor: pointer;
+}
+
+.apple-button-primary:hover {
+  background: var(--apple-blue-hover);
+}
+
+.apple-button-secondary {
+  background: transparent;
+  color: var(--apple-blue);
+  padding: 0.75rem 2rem;
+  border: 2px solid var(--apple-blue);
+  border-radius: var(--radius-full);
+  font-size: 1.0625rem;
+  font-weight: 500;
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.apple-button-secondary:hover {
+  background: rgba(0, 113, 227, 0.08);
+}
+
+/* ============================================
+   APPLE CARD STYLES
+   ============================================ */
+.apple-card {
+  background: white;
+  border: 1px solid var(--apple-grey-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3);
+  transition: box-shadow var(--transition-slow);
+}
+
+.apple-card:hover {
+  box-shadow: var(--shadow-xl);
+}
+
+.apple-card-dark {
+  background: var(--apple-bg-secondary);
+  border: 1px solid var(--apple-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3);
+  transition: all var(--transition-slow);
+}
+
+.apple-card-dark:hover {
+  background: var(--apple-bg-tertiary);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   APPLE INPUT STYLES
+   ============================================ */
+.apple-input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1px solid var(--apple-grey-300);
+  border-radius: var(--radius-md);
+  font-size: 1.0625rem;
+  transition: all var(--transition-base);
+  background: white;
+}
+
+.apple-input:focus {
+  outline: none;
+  border-color: var(--apple-blue);
+  box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.1);
+}
+
+.apple-input-dark {
+  background: var(--apple-bg-tertiary);
+  border: 1px solid var(--apple-border);
+  color: var(--apple-text-primary);
+}
+
+.apple-input-dark:focus {
+  border-color: var(--apple-blue);
+  box-shadow: 0 0 0 4px rgba(10, 132, 255, 0.15);
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+.apple-max-width {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.apple-max-width-lg {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.apple-section-padding {
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-12);
+}
+
+.apple-fade-in {
+  animation: fadeIn var(--transition-slow) ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

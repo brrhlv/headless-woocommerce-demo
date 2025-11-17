@@ -47,6 +47,9 @@ export default function Header() {
             <Link href="/contact" className="text-gray-300 hover:text-white font-light text-sm tracking-wide uppercase transition-colors hidden lg:block">
               Contact
             </Link>
+            <Link href="/apple-preview" className="text-gray-300 hover:text-blue-400 font-light text-sm tracking-wide uppercase transition-colors hidden xl:block">
+              Apple
+            </Link>
             <Link href="/cart" className="relative group">
               <ShoppingCart className="w-5 h-5 text-gray-300 group-hover:text-white transition-colors" strokeWidth={1.5} />
               {mounted && itemCount > 0 && (
