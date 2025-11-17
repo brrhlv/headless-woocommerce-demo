@@ -13,9 +13,9 @@ export default function FAQPage() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-12 text-white">
       <article
-        className="prose prose-lg max-w-none"
+        className="prose prose-lg prose-invert max-w-none"
         dangerouslySetInnerHTML={{ __html: faqPage.content.rendered }}
       />
     </div>

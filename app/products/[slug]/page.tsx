@@ -52,7 +52,7 @@ export default function ProductPage() {
       <div className="container mx-auto px-4 py-8">
         <div className="text-center py-16">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600 mx-auto"></div>
-          <p className="mt-4 text-gray-600 font-light text-sm">Loading product...</p>
+          <p className="mt-4 text-gray-400 font-light text-sm">Loading product...</p>
         </div>
       </div>
     );
@@ -62,10 +62,10 @@ export default function ProductPage() {
     return (
       <div className="container mx-auto px-4 py-8">
         <div className="text-center py-16">
-          <p className="text-lg text-gray-600 font-light">Product not found</p>
+          <p className="text-lg text-gray-400 font-light">Product not found</p>
           <button
             onClick={() => router.push("/")}
-            className="mt-6 text-black hover:text-red-600 font-light text-sm tracking-wide uppercase transition-colors"
+            className="mt-6 text-white hover:text-red-600 font-light text-sm tracking-wide uppercase transition-colors"
           >
             Return to products
           </button>
@@ -78,7 +78,7 @@ export default function ProductPage() {
     <div className="container mx-auto px-4 py-12">
       <button
         onClick={() => router.back()}
-        className="flex items-center gap-2 text-gray-600 hover:text-black mb-8 font-light text-sm tracking-wide uppercase transition-colors"
+        className="flex items-center gap-2 text-gray-400 hover:text-red-600 mb-8 font-light text-sm tracking-wide uppercase transition-colors"
       >
         <ArrowLeft className="w-4 h-4" strokeWidth={1.5} />
         Back
@@ -87,7 +87,7 @@ export default function ProductPage() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
         {/* Product Images */}
         <div>
-          <div className="relative h-[500px] w-full mb-4 bg-gray-50 overflow-hidden">
+          <div className="relative h-[500px] w-full mb-4 bg-zinc-950 overflow-hidden">
             <Image
               src={product.images[selectedImage]?.src || "/placeholder-product.jpg"}
               alt={product.name}
@@ -108,8 +108,8 @@ export default function ProductPage() {
                 <button
                   key={image.id}
                   onClick={() => setSelectedImage(index)}
-                  className={`relative h-24 bg-gray-50 overflow-hidden transition-all ${
-                    selectedImage === index ? "ring-2 ring-black" : "opacity-60 hover:opacity-100"
+                  className={`relative h-24 bg-zinc-950 overflow-hidden transition-all ${
+                    selectedImage === index ? "ring-2 ring-red-600" : "opacity-60 hover:opacity-100"
                   }`}
                 >
                   <Image
@@ -126,7 +126,7 @@ export default function ProductPage() {
 
         {/* Product Details */}
         <div>
-          <h1 className="text-3xl font-light text-black mb-6 tracking-wide">{product.name}</h1>
+          <h1 className="text-3xl font-light text-white mb-6 tracking-wide">{product.name}</h1>
 
           <div className="flex items-center gap-6 mb-8">
             <div className="flex items-center gap-3">
@@ -135,7 +135,7 @@ export default function ProductPage() {
                   ${product.regular_price}
                 </span>
               )}
-              <span className="text-3xl font-normal text-black">
+              <span className="text-3xl font-normal text-white">
                 ${product.price}
               </span>
             </div>
@@ -143,7 +143,7 @@ export default function ProductPage() {
             <span
               className={`px-4 py-1 text-xs font-light tracking-wider uppercase ${
                 product.stock_status === "instock"
-                  ? "text-gray-600"
+                  ? "text-gray-400"
                   : "text-red-600"
               }`}
             >
@@ -153,20 +153,20 @@ export default function ProductPage() {
 
           {product.short_description && (
             <div
-              className="text-gray-700 font-light leading-relaxed mb-8 pb-8 border-b border-gray-200"
+              className="text-gray-400 font-light leading-relaxed mb-8 pb-8 border-b border-zinc-800"
               dangerouslySetInnerHTML={{ __html: product.short_description }}
             />
           )}
 
           {/* Quantity Selector */}
           <div className="mb-8">
-            <label className="block text-xs font-light tracking-wider uppercase text-gray-700 mb-3">
+            <label className="block text-xs font-light tracking-wider uppercase text-gray-400 mb-3">
               Quantity
             </label>
             <div className="flex items-center gap-4">
               <button
                 onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                className="w-12 h-12 border border-gray-300 hover:border-black transition-colors flex items-center justify-center font-light"
+                className="w-12 h-12 border border-zinc-700 hover:border-red-600 transition-colors flex items-center justify-center font-light"
               >
                 -
               </button>
@@ -175,11 +175,11 @@ export default function ProductPage() {
                 min="1"
                 value={quantity}
                 onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value) || 1))}
-                className="w-24 h-12 text-center border border-gray-300 font-light focus:border-black focus:ring-0"
+                className="w-24 h-12 text-center border border-zinc-700 font-light focus:border-red-600 focus:ring-0"
               />
               <button
                 onClick={() => setQuantity(quantity + 1)}
-                className="w-12 h-12 border border-gray-300 hover:border-black transition-colors flex items-center justify-center font-light"
+                className="w-12 h-12 border border-zinc-700 hover:border-red-600 transition-colors flex items-center justify-center font-light"
               >
                 +
               </button>
@@ -190,7 +190,7 @@ export default function ProductPage() {
           <button
             onClick={handleAddToCart}
             disabled={product.stock_status !== "instock"}
-            className="w-full bg-black text-white py-4 font-light text-sm tracking-wider uppercase hover:bg-red-600 disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center gap-3 transition-colors mb-6"
+            className="w-full bg-red-600 text-white py-4 font-light text-sm tracking-wider uppercase hover:bg-red-700 disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center gap-3 transition-colors mb-6"
           >
             <ShoppingCart className="w-4 h-4" strokeWidth={1.5} />
             {product.stock_status === "instock" ? "Add to Cart" : "Out of Stock"}
@@ -199,9 +199,9 @@ export default function ProductPage() {
           {/* Product Description */}
           {product.description && (
             <div className="mt-12">
-              <h2 className="text-sm font-light tracking-wider uppercase text-black mb-6">Description</h2>
+              <h2 className="text-sm font-light tracking-wider uppercase text-white mb-6">Description</h2>
               <div
-                className="text-gray-700 font-light leading-relaxed prose prose-sm max-w-none"
+                className="text-gray-400 font-light leading-relaxed prose prose-sm max-w-none"
                 dangerouslySetInnerHTML={{ __html: product.description }}
               />
             </div>
@@ -209,13 +209,13 @@ export default function ProductPage() {
 
           {/* Categories */}
           {product.categories && product.categories.length > 0 && (
-            <div className="mt-8 pt-8 border-t border-gray-200">
-              <h3 className="text-xs font-light tracking-wider uppercase text-gray-700 mb-3">Categories</h3>
+            <div className="mt-8 pt-8 border-t border-zinc-800">
+              <h3 className="text-xs font-light tracking-wider uppercase text-gray-400 mb-3">Categories</h3>
               <div className="flex flex-wrap gap-2">
                 {product.categories.map((category) => (
                   <span
                     key={category.id}
-                    className="px-3 py-1 border border-gray-300 text-gray-700 text-xs font-light tracking-wide uppercase hover:border-black transition-colors"
+                    className="px-3 py-1 border border-zinc-700 text-gray-400 text-xs font-light tracking-wide uppercase hover:border-red-600 transition-colors"
                   >
                     {category.name}
                   </span>
