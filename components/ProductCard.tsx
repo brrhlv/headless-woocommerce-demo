@@ -11,13 +11,13 @@ export default function ProductCard({ product }: ProductCardProps) {
 
   return (
     <Link href={`/products/${product.slug}`} className="group">
-      <div className="bg-white border border-gray-200 overflow-hidden hover:border-black transition-all duration-300">
-        <div className="relative h-80 w-full overflow-hidden bg-gray-50">
+      <div className="bg-zinc-900 border border-zinc-800 overflow-hidden hover:border-red-600 transition-all duration-300">
+        <div className="relative h-80 w-full overflow-hidden bg-zinc-950">
           <Image
             src={imageUrl}
             alt={product.name}
             fill
-            className="object-cover group-hover:opacity-90 transition-opacity duration-500"
+            className="object-cover group-hover:opacity-75 transition-opacity duration-500"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           {product.on_sale && (
@@ -28,13 +28,13 @@ export default function ProductCard({ product }: ProductCardProps) {
         </div>
 
         <div className="p-6">
-          <h3 className="text-base font-light text-black mb-3 line-clamp-2 tracking-wide">
+          <h3 className="text-base font-light text-white mb-3 line-clamp-2 tracking-wide">
             {product.name}
           </h3>
 
           {product.short_description && (
             <div
-              className="text-xs text-gray-500 mb-4 line-clamp-2 font-light"
+              className="text-xs text-gray-400 mb-4 line-clamp-2 font-light"
               dangerouslySetInnerHTML={{ __html: product.short_description }}
             />
           )}
@@ -42,19 +42,19 @@ export default function ProductCard({ product }: ProductCardProps) {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               {product.on_sale && product.regular_price && (
-                <span className="text-sm text-gray-400 line-through font-light">
+                <span className="text-sm text-gray-500 line-through font-light">
                   ${product.regular_price}
                 </span>
               )}
-              <span className="text-lg font-normal text-black">
+              <span className="text-lg font-normal text-white">
                 ${product.price}
               </span>
             </div>
 
             <span className={`text-xs px-3 py-1 font-light tracking-wide uppercase ${
               product.stock_status === "instock"
-                ? "text-gray-600"
-                : "text-red-600"
+                ? "text-gray-400"
+                : "text-red-500"
             }`}>
               {product.stock_status === "instock" ? "In Stock" : "Out of Stock"}
             </span>

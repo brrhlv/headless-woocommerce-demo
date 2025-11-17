@@ -8,15 +8,15 @@ export default async function HomePage() {
     <div className="min-h-screen">
       <div className="container mx-auto px-4 py-16">
         <div className="mb-16 text-center">
-          <h1 className="text-3xl font-light text-black mb-4 tracking-wider uppercase">Featured Products</h1>
-          <p className="text-gray-600 font-light text-sm max-w-2xl mx-auto">
+          <h1 className="text-3xl font-light text-white mb-4 tracking-wider uppercase">Featured Products</h1>
+          <p className="text-gray-400 font-light text-sm max-w-2xl mx-auto">
             Discover our curated collection of premium products
           </p>
         </div>
 
         {products.length === 0 ? (
           <div className="text-center py-16">
-            <p className="text-lg text-gray-600 font-light">
+            <p className="text-lg text-gray-400 font-light">
               No products available
             </p>
           </div>
