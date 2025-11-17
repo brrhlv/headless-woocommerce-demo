@@ -5,12 +5,14 @@ import ProductCard from "@/components/ProductCard";
 export default async function CategoriesPage({
   searchParams,
 }: {
-  searchParams: { category?: string };
+  searchParams: Promise<{ category?: string }>;
 }) {
-  const categorySlug = searchParams.category;
+  const params = await searchParams;
+  const categorySlug = params.category;
 
-  // Get all products
-  const allProducts = await getProducts({ per_page: 100 }) || MOCK_PRODUCTS;
+  // Get all products - use mock data if API returns empty or null
+  const apiProducts = await getProducts({ per_page: 100 });
+  const allProducts = (apiProducts && apiProducts.length > 0) ? apiProducts : MOCK_PRODUCTS;
 
   // Filter by category if specified
   const filteredProducts = categorySlug

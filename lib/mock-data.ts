@@ -6,6 +6,7 @@ export const MOCK_PRODUCTS = [
     id: 1,
     name: 'Premium Wireless Headphones',
     slug: 'premium-wireless-headphones',
+    permalink: '/products/premium-wireless-headphones',
     price: '199.99',
     regular_price: '249.99',
     sale_price: '199.99',
@@ -16,10 +17,13 @@ export const MOCK_PRODUCTS = [
       {
         id: 1,
         src: 'https://picsum.photos/seed/headphones/800/800',
+        name: 'headphones',
         alt: 'Premium Wireless Headphones'
       }
     ],
     categories: [{ id: 1, name: 'Electronics', slug: 'electronics' }],
+    tags: [],
+    attributes: [],
     stock_status: 'instock',
     stock_quantity: 50
   },
@@ -27,18 +31,24 @@ export const MOCK_PRODUCTS = [
     id: 2,
     name: 'Smart Watch Pro',
     slug: 'smart-watch-pro',
+    permalink: '/products/smart-watch-pro',
     price: '299.99',
     regular_price: '299.99',
+    sale_price: '',
+    on_sale: false,
     description: '<p>Stay connected and track your fitness with our advanced smartwatch featuring heart rate monitoring, GPS, and water resistance.</p>',
     short_description: '<p>Advanced fitness tracking smartwatch</p>',
     images: [
       {
         id: 2,
         src: 'https://picsum.photos/seed/smartwatch/800/800',
+        name: 'smartwatch',
         alt: 'Smart Watch Pro'
       }
     ],
     categories: [{ id: 1, name: 'Electronics', slug: 'electronics' }],
+    tags: [],
+    attributes: [],
     stock_status: 'instock',
     stock_quantity: 30
   },
@@ -46,18 +56,24 @@ export const MOCK_PRODUCTS = [
     id: 3,
     name: 'Minimalist Leather Wallet',
     slug: 'minimalist-leather-wallet',
+    permalink: '/products/minimalist-leather-wallet',
     price: '49.99',
     regular_price: '49.99',
+    sale_price: '',
+    on_sale: false,
     description: '<p>Handcrafted genuine leather wallet with RFID protection. Sleek, compact design fits easily in your pocket.</p>',
     short_description: '<p>Genuine leather wallet with RFID protection</p>',
     images: [
       {
         id: 3,
         src: 'https://picsum.photos/seed/wallet/800/800',
+        name: 'wallet',
         alt: 'Minimalist Leather Wallet'
       }
     ],
     categories: [{ id: 2, name: 'Accessories', slug: 'accessories' }],
+    tags: [],
+    attributes: [],
     stock_status: 'instock',
     stock_quantity: 100
   },
@@ -65,6 +81,7 @@ export const MOCK_PRODUCTS = [
     id: 4,
     name: 'Portable Bluetooth Speaker',
     slug: 'portable-bluetooth-speaker',
+    permalink: '/products/portable-bluetooth-speaker',
     price: '79.99',
     regular_price: '99.99',
     sale_price: '79.99',
@@ -75,10 +92,13 @@ export const MOCK_PRODUCTS = [
       {
         id: 4,
         src: 'https://picsum.photos/seed/speaker/800/800',
+        name: 'speaker',
         alt: 'Portable Bluetooth Speaker'
       }
     ],
     categories: [{ id: 1, name: 'Electronics', slug: 'electronics' }],
+    tags: [],
+    attributes: [],
     stock_status: 'instock',
     stock_quantity: 75
   },
@@ -86,6 +106,7 @@ export const MOCK_PRODUCTS = [
     id: 5,
     name: 'Ergonomic Office Chair',
     slug: 'ergonomic-office-chair',
+    permalink: '/products/ergonomic-office-chair',
     price: '399.99',
     regular_price: '499.99',
     sale_price: '399.99',
@@ -96,10 +117,13 @@ export const MOCK_PRODUCTS = [
       {
         id: 5,
         src: 'https://picsum.photos/seed/chair/800/800',
+        name: 'chair',
         alt: 'Ergonomic Office Chair'
       }
     ],
     categories: [{ id: 3, name: 'Furniture', slug: 'furniture' }],
+    tags: [],
+    attributes: [],
     stock_status: 'instock',
     stock_quantity: 20
   },
@@ -107,18 +131,24 @@ export const MOCK_PRODUCTS = [
     id: 6,
     name: 'Stainless Steel Water Bottle',
     slug: 'stainless-steel-water-bottle',
+    permalink: '/products/stainless-steel-water-bottle',
     price: '29.99',
     regular_price: '29.99',
+    sale_price: '',
+    on_sale: false,
     description: '<p>Insulated stainless steel water bottle keeps drinks cold for 24 hours or hot for 12 hours. BPA-free and eco-friendly.</p>',
     short_description: '<p>Insulated stainless steel water bottle</p>',
     images: [
       {
         id: 6,
         src: 'https://picsum.photos/seed/bottle/800/800',
+        name: 'bottle',
         alt: 'Stainless Steel Water Bottle'
       }
     ],
     categories: [{ id: 2, name: 'Accessories', slug: 'accessories' }],
+    tags: [],
+    attributes: [],
     stock_status: 'instock',
     stock_quantity: 150
   },
@@ -126,18 +156,24 @@ export const MOCK_PRODUCTS = [
     id: 7,
     name: 'Mechanical Keyboard RGB',
     slug: 'mechanical-keyboard-rgb',
+    permalink: '/products/mechanical-keyboard-rgb',
     price: '149.99',
     regular_price: '149.99',
+    sale_price: '',
+    on_sale: false,
     description: '<p>Gaming mechanical keyboard with customizable RGB backlighting, Cherry MX switches, and programmable macro keys.</p>',
     short_description: '<p>Gaming mechanical keyboard with RGB backlighting</p>',
     images: [
       {
         id: 7,
         src: 'https://picsum.photos/seed/keyboard/800/800',
+        name: 'keyboard',
         alt: 'Mechanical Keyboard RGB'
       }
     ],
     categories: [{ id: 1, name: 'Electronics', slug: 'electronics' }],
+    tags: [],
+    attributes: [],
     stock_status: 'instock',
     stock_quantity: 45
   },
@@ -145,6 +181,7 @@ export const MOCK_PRODUCTS = [
     id: 8,
     name: 'Yoga Mat Premium',
     slug: 'yoga-mat-premium',
+    permalink: '/products/yoga-mat-premium',
     price: '59.99',
     regular_price: '79.99',
     sale_price: '59.99',
@@ -155,10 +192,13 @@ export const MOCK_PRODUCTS = [
       {
         id: 8,
         src: 'https://picsum.photos/seed/yogamat/800/800',
+        name: 'yogamat',
         alt: 'Yoga Mat Premium'
       }
     ],
     categories: [{ id: 4, name: 'Sports & Fitness', slug: 'sports-fitness' }],
+    tags: [],
+    attributes: [],
     stock_status: 'instock',
     stock_quantity: 60
   }
